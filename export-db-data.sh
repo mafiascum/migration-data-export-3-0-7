@@ -3,6 +3,8 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$DIR"
 
+source ./env.sh
+
 DUMP_FILE_NAME="ms_phpbb3_and_ms_mediawiki_data.sql"
 ZIP_FILE_NAME="mafiascum.backup.prod.db.data.latest.7z"
 
