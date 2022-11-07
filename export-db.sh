@@ -6,7 +6,7 @@ cd "$DIR"
 source ./env.sh
 
 DUMP_FILE_NAME="ms_phpbb3_and_ms_mediawiki.sql"
-ZIP_FILE_NAME="mafiascum.backup.prod.db.latest.7z"
+ZIP_FILE_NAME="mafiascum.backup.${ENVIRONMENT_NAME}.db.latest.7z"
 EXPORT_TABLES="ms_phpbb3 ms_mediawiki"
 MYSQL_EXTRA_FLAGS="--lock-tables=false --routines --triggers"
 
