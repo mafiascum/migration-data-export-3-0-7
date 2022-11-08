@@ -17,7 +17,7 @@ mysqldump $MYSQL_EXTRA_FLAGS --user=root --password="$MYSQL_PASSWORD" --database
  | grep -E -v 'FULLTEXT KEY `((post_content)|(post_text)|(post_subject))`' \
  | sed 's/^ \+KEY `tid_post_time` (`topic_id`,`post_time`),/  KEY `tid_post_time` (`topic_id`,`post_time`)/g' > "$DUMP_FILE_NAME"
 mysqldump $MYSQL_EXTRA_FLAGS --user=root --password="$MYSQL_PASSWORD" --databases $EXPORT_TABLES --no-create-info >> "$DUMP_FILE_NAME"
-7z -mx=9 -p"$BACKUP_PASSWORD" a "$ZIP_FILE_NAME" "$DUMP_FILE_NAME"
+7z -mx=1 -p"$BACKUP_PASSWORD" a "$ZIP_FILE_NAME" "$DUMP_FILE_NAME"
 
 rm -f "$DUMP_FILE_NAME"
 
