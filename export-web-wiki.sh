@@ -13,7 +13,7 @@ rm -f "$ZIP_FILE_NAME"
 
 mkdir -p images
 
-rsync -avz "$WEB_WIKI_PATH/images" images/
+rsync -avz "$WEB_WIKI_PATH/images/" images/
 
 zip -r -e -P "$BACKUP_PASSWORD" "$ZIP_FILE_NAME" images/
 aws s3 cp "$ZIP_FILE_NAME" "s3://$AWS_BUCKET_NAME/web-backups/$ZIP_FILE_NAME"
